@@ -48,10 +48,14 @@ int main()
 	
 	while(1)
 	{
-		USART_SendData(USART1,speed_set_buff.left_high);
-		USART_SendData(USART1,speed_set_buff.left_low);
-		USART_SendData(USART1,speed_set_buff.right_high);
-		USART_SendData(USART1,speed_set_buff.right_low);
+//		USART_SendData(USART1,speed_set_buff.left_high);
+//		delay_ms(15);
+//		USART_SendData(USART1,speed_set_buff.left_low);
+//		delay_ms(15);
+//		USART_SendData(USART1,speed_set_buff.right_high);
+//		delay_ms(15);
+//		USART_SendData(USART1,speed_set_buff.right_low);
+		
 //ddddd		
 		led2=!led2;
 		key=PS2_DataKey();
@@ -125,10 +129,10 @@ int main()
 		if(speed_set_buff.sign=='N')
 		{
 			wheel_speed[0]=(int16_t)(speed_set_buff.left_high <<8 |speed_set_buff.left_low );
-			wheel_speed[1]=(int16_t)(~(speed_set_buff.right_high<<8|speed_set_buff.right_low)+1);
+			wheel_speed[1]=-(int16_t)(speed_set_buff.right_high<<8|speed_set_buff.right_low);
 		}
-//		wheel_speed[0]=1500;
-//		wheel_speed[1]=-1500;
+//		wheel_speed[0]=2220;
+//		wheel_speed[1]=-780;
 		//底盘数据更新
 		chassis_feedback_update(&chassis_move);
 		Motor_error_equalize(&chassis_move);

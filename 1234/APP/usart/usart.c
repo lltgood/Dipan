@@ -134,7 +134,7 @@ void USART1_IRQHandler(void)                	//串口1中断服务程序
 				speed_set_buff.right_low  =usart1_buff[4];
 				speed_set_buff.sign =usart1_buff[5];
 				usart_rx=0;
-				USART_SendData(USART1,usart1_buff[5]);
+//				USART_SendData(USART1,usart1_buff[5]);
 			}			
 		}
 		else usart_rx=0;
