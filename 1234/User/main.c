@@ -52,7 +52,7 @@ int main()
 		USART_SendData(USART1,speed_set_buff.left_low);
 		USART_SendData(USART1,speed_set_buff.right_high);
 		USART_SendData(USART1,speed_set_buff.right_low);
-		
+//ddddd		
 		led2=!led2;
 		key=PS2_DataKey();
 		if(speed_set_buff.sign=='Y')
