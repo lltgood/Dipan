@@ -2,7 +2,7 @@
 .\obj\system.o: Public\system.h
 .\obj\system.o: .\User\stm32f10x.h
 .\obj\system.o: .\Libraries\CMSIS\core_cm3.h
-.\obj\system.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\system.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\system.o: .\Libraries\CMSIS\system_stm32f10x.h
 .\obj\system.o: .\User\stm32f10x_conf.h
 .\obj\system.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

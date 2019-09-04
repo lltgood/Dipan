@@ -3,7 +3,7 @@
 .\obj\usart.o: .\Public\system.h
 .\obj\usart.o: .\User\stm32f10x.h
 .\obj\usart.o: .\Libraries\CMSIS\core_cm3.h
-.\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\usart.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\usart.o: .\Libraries\CMSIS\system_stm32f10x.h
 .\obj\usart.o: .\User\stm32f10x_conf.h
 .\obj\usart.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -30,6 +30,6 @@
 .\obj\usart.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\obj\usart.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\obj\usart.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
-.\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\usart.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\obj\usart.o: .\User\main.h
 .\obj\usart.o: .\Public\SysTick.h

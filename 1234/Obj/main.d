@@ -3,7 +3,7 @@
 .\obj\main.o: .\Public\system.h
 .\obj\main.o: .\User\stm32f10x.h
 .\obj\main.o: .\Libraries\CMSIS\core_cm3.h
-.\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\main.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\main.o: .\Libraries\CMSIS\system_stm32f10x.h
 .\obj\main.o: .\User\stm32f10x_conf.h
 .\obj\main.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -35,10 +35,10 @@
 .\obj\main.o: .\User\main.h
 .\obj\main.o: .\Hardwork\can\can.h
 .\obj\main.o: .\APP\usart\usart.h
-.\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\main.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\obj\main.o: .\APP\time\time.h
 .\obj\main.o: .\APP\CAN_receive\CAN_Receive.h
 .\obj\main.o: .\Hardwork\OLED\oled.h
-.\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\main.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\main.o: .\Hardwork\ps2\ps2.h
 .\obj\main.o: .\APP\control\control.h

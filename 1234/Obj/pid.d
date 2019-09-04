@@ -4,7 +4,7 @@
 .\obj\pid.o: .\Public\system.h
 .\obj\pid.o: .\User\stm32f10x.h
 .\obj\pid.o: .\Libraries\CMSIS\core_cm3.h
-.\obj\pid.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\pid.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\pid.o: .\Libraries\CMSIS\system_stm32f10x.h
 .\obj\pid.o: .\User\stm32f10x_conf.h
 .\obj\pid.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

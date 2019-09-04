@@ -1,7 +1,7 @@
 .\obj\time.o: APP\time\time.c
 .\obj\time.o: .\User\stm32f10x.h
 .\obj\time.o: .\Libraries\CMSIS\core_cm3.h
-.\obj\time.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\time.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\time.o: .\Libraries\CMSIS\system_stm32f10x.h
 .\obj\time.o: .\User\stm32f10x_conf.h
 .\obj\time.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -35,10 +35,10 @@
 .\obj\time.o: .\APP\pid\pid.h
 .\obj\time.o: .\Hardwork\can\can.h
 .\obj\time.o: .\Hardwork\led\led.h
-.\obj\time.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-.\obj\time.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\time.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\math.h
+.\obj\time.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\time.o: .\APP\usart\usart.h
-.\obj\time.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\time.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\obj\time.o: .\Hardwork\ps2\ps2.h
 .\obj\time.o: .\Public\SysTick.h
 .\obj\time.o: .\APP\control\control.h

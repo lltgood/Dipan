@@ -4,7 +4,7 @@
 .\obj\ps2.o: .\Public\system.h
 .\obj\ps2.o: .\User\stm32f10x.h
 .\obj\ps2.o: .\Libraries\CMSIS\core_cm3.h
-.\obj\ps2.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\ps2.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\ps2.o: .\Libraries\CMSIS\system_stm32f10x.h
 .\obj\ps2.o: .\User\stm32f10x_conf.h
 .\obj\ps2.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

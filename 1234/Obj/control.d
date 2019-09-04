@@ -1,7 +1,7 @@
 .\obj\control.o: APP\control\control.c
 .\obj\control.o: .\User\stm32f10x.h
 .\obj\control.o: .\Libraries\CMSIS\core_cm3.h
-.\obj\control.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\control.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\control.o: .\Libraries\CMSIS\system_stm32f10x.h
 .\obj\control.o: .\User\stm32f10x_conf.h
 .\obj\control.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -33,8 +33,8 @@
 .\obj\control.o: .\Hardwork\led\led.h
 .\obj\control.o: .\APP\CAN_receive\CAN_Receive.h
 .\obj\control.o: .\User\main.h
-.\obj\control.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-.\obj\control.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\control.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\math.h
+.\obj\control.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\obj\control.o: APP\control\control.h
 .\obj\control.o: .\APP\pid\pid.h
 .\obj\control.o: .\APP\time\time.h

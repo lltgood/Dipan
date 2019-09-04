@@ -3,7 +3,7 @@
 .\obj\can_receive.o: .\User\main.h
 .\obj\can_receive.o: .\User\stm32f10x.h
 .\obj\can_receive.o: .\Libraries\CMSIS\core_cm3.h
-.\obj\can_receive.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\can_receive.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\can_receive.o: .\Libraries\CMSIS\system_stm32f10x.h
 .\obj\can_receive.o: .\User\stm32f10x_conf.h
 .\obj\can_receive.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

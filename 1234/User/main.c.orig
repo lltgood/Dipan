@@ -122,10 +122,24 @@ int main()
 			wheel_speed[0]=(int16_t)(speed_set_buff.left_high <<8 |speed_set_buff.left_low );
 			wheel_speed[1]=(int16_t)(speed_set_buff.right_high<<8|speed_set_buff.right_low);
 			wheel_speed[1]=-wheel_speed[1];
-			wheel_speed[0]= 1000;
-			wheel_speed[1]= -3000;
+USART_SendData(USART1,0x55);
+			delay_ms(15);
+			USART_SendData(USART1,speed_set_buff.right_high);
+						delay_ms(15);
+
+			USART_SendData(USART1,speed_set_buff.right_low);
+						delay_ms(15);
+
+			USART_SendData(USART1,speed_set_buff.right_high);
+						delay_ms(15);
+
+			USART_SendData(USART1,speed_set_buff.right_low);
+						delay_ms(15);
+
+			USART_SendData(USART1,0xAA);
+						delay_ms(15);
+
 		}
-		
 		chassis_feedback_update(&chassis_move);
 		Motor_error_equalize(&chassis_move);
 		//µ×ÅÌ¿ØÖÆPID¼ÆËã

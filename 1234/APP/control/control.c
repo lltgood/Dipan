@@ -10,7 +10,7 @@
 u8 flag[2]={0,0};
 s32 spdTag, spdNow, control;//定义一个目标速度，采样速度，控制量
 int32_t speed1,speed2;
-int32_t wheel_speed[2] = {0, 0};
+int16_t wheel_speed[2] = {0, 0};
 chassis_move_t chassis_move;
 
 PID_IncrementType PID_Control;//定义PID算法的结构体
