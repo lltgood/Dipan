@@ -122,21 +122,72 @@ void USART1_IRQHandler(void)                	//串口1中断服务程序
     {
         USART_ClearITPendingBit(USART1,USART_IT_RXNE);//清楚中断标志
         usart1_buff[usart_rx] =USART_ReceiveData(USART1);//(USART1->DR);	//读取接收到的数据
+
+        //USART_SendData(USART1,0XBB);
+        delay_ms(1);
+
         usart_rx++;
         if(usart1_buff[0]==0xaa)
         {
+            //USART_SendData(USART1,0XCC);
+            delay_ms(1);
             if(usart1_buff[Buff_Len-1]==0x55||usart_rx==Buff_Len)
             {
+                //USART_SendData(USART1,0xDD);
+                delay_ms(1);
                 speed_set_buff.left_high	=usart1_buff[1];
                 speed_set_buff.left_low  	=usart1_buff[2];
                 speed_set_buff.right_high =usart1_buff[3];
                 speed_set_buff.right_low  =usart1_buff[4];
                 speed_set_buff.sign =usart1_buff[5];
+							        USART_SendData(USART1,usart1_buff[4]);
+        delay_ms(1);
                 usart_rx=0;
+				
 								usart1_buff[0]=0;
+								usart1_buff[1]=0;
+								usart1_buff[2]=0;
+								usart1_buff[3]=0;
+								usart1_buff[4]=0;
+								usart1_buff[5]=0;
 							  usart1_buff[6]=0;
             }
         }
         else usart_rx=0;
     }
+
+
+//    static uint8_t m = 0,rebuf_3[7] = {0};
+//    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+//    {
+//			USART_ClearITPendingBit(USART1,USART_IT_RXNE);//清楚中断标志
+//        rebuf_3[m] = USART_ReceiveData(USART1);
+//				USART_SendData(USART1,0XAA);
+//				delay_ms(15);
+//				USART_SendData(USART1,rebuf_3[m]);
+//			  delay_ms(15);
+//        m++;
+//        if (rebuf_3[0]!= 0xAA)
+//        {
+//            m = 0;
+//            rebuf_3[0] = 0;
+//        }
+//        if (rebuf_3[m-1]==0x55)
+//        {
+//        }
+//        else {
+//            if(m==7)
+//            {
+//                speed_set_buff.left_high	=rebuf_3[1];
+//                speed_set_buff.left_low  	=rebuf_3[2];
+//                speed_set_buff.right_high =rebuf_3[3];
+//                speed_set_buff.right_low  =rebuf_3[4];
+
+//                m = 0;
+//                rebuf_3[0]=0;
+//                USART_SendData(USART1,0XAA);
+//                USART_SendData(USART1,rebuf_3[2]);
+//            }
+//        }
+//    }
 }

@@ -1,6 +1,7 @@
 .\obj\can_receive.o: APP\CAN_receive\CAN_Receive.c
 .\obj\can_receive.o: APP\CAN_receive\CAN_Receive.h
 .\obj\can_receive.o: .\User\main.h
+.\obj\can_receive.o: .\Public\System.h
 .\obj\can_receive.o: .\User\stm32f10x.h
 .\obj\can_receive.o: .\Libraries\CMSIS\core_cm3.h
 .\obj\can_receive.o: I:\A-01-Keil5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -31,4 +32,3 @@
 .\obj\can_receive.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\obj\can_receive.o: .\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\obj\can_receive.o: .\Hardwork\OLED\oled.h
-.\obj\can_receive.o: .\Public\system.h

@@ -1,22 +1,3 @@
-/**********************************************************
-*Project Name:chassis motor control(Demon)
-*Task:				M3508 control
-*							PID	calculate
-*							PS2 control
-*Author:			Huang.F.Y.
-*Update:			PS2 debug	
-*Date:				2019.8.15
-************************************************************
-***************************管脚图***************************
-											STM32F103C8T6
-PA9	->USART1 RX					PC16->led3(time3)
-PA10->USART1 TX					PB12->PS2 DI(DAT)
-PA11->CAN1 RX						PB13->PS2 DO(CMD)
-PA12->CAN1 TX						PB14->PS2 CS
-PC14->led1(main)				PB15->PS2 CLK
-PC15->led2(time4)
-************************************************************/
-
 #include "SysTick.h"
 #include "system.h"
 #include "led.h"
@@ -33,6 +14,7 @@ PC15->led2(time4)
 
 void All_Init(void);
 
+u8 can_sign;
 extern Buff speed_set_buff;
 extern int16_t wheel_speed[2];
 //底盘运动数据
@@ -50,6 +32,7 @@ int main()
 	{		
 		led2=!led2;
 		key=PS2_DataKey();
+		can_sign =CAN_Receive_Msg();
 		if(speed_set_buff.sign=='Y')
 		{
 				if(key!=0)                   //有按键按下
@@ -119,13 +102,17 @@ int main()
 		}
 		if(speed_set_buff.sign=='N')
 		{
-			wheel_speed[0]=(int16_t)(speed_set_buff.left_high <<8 |speed_set_buff.left_low );
-			wheel_speed[1]=(int16_t)(speed_set_buff.right_high<<8|speed_set_buff.right_low);
-			wheel_speed[1]=-wheel_speed[1];
-			wheel_speed[0]= 1000;
-			wheel_speed[1]= -3000;
+			if(can_sign)
+			{
+				wheel_speed[0]=(int16_t)(speed_set_buff.left_high <<8 |speed_set_buff.left_low );
+				wheel_speed[1]=(int16_t)(speed_set_buff.right_high<<8|speed_set_buff.right_low);
+				wheel_speed[1]=-wheel_speed[1];
+//				wheel_speed[0]= 1000;
+//				wheel_speed[1]= -3000;
+//				USART_SendData(USART1,0X32);
+//				delay_ms(1);
+			}
 		}
-		
 		chassis_feedback_update(&chassis_move);
 		Motor_error_equalize(&chassis_move);
 		//底盘控制PID计算
