@@ -2,7 +2,6 @@
 #ifndef CANTASK_H
 #define CANTASK_H
 #include "main.h"
-#include "System.h"
 
 #define CAN_RX0_INT_ENABLE 1   //使用中断
 #define CHASSIS_CAN CAN1
@@ -26,7 +25,8 @@ typedef struct
 	int16_t last_ecd;
 } motor_measure_t;
 
-u8 CAN_Receive_Msg(void);
+//void CAN_Receive_Msg(void);
+
 extern void CAN_CMD_CHASSIS_RESET_ID(void);
 
 //发送底盘电机控制命令
